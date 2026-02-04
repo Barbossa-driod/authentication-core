@@ -1,0 +1,43 @@
+server:
+  port: 8098
+  servlet:
+    context-path: /api/auth
+
+spring:
+  application:
+    name: authentication-habit-core
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    hikari:
+      connection-timeout: 20000
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 60000
+      max-lifetime: 180000
+    url: jdbc:postgresql://localhost:5432/habit?stringtype=unspecified
+    username: postgres
+#    password: root
+  liquibase:
+    enabled: true
+    change-log: classpath:/db/changelog/changelog-master.xml
+    url: jdbc:postgresql://localhost:5432/habit
+    user: postgres
+#    password: root
+
+jwt:
+  secret: ${SECRET}
+  header: Authorization
+  expiration: 600
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+
+filter:
+  exclusion:
+    urls: >
+      /test,

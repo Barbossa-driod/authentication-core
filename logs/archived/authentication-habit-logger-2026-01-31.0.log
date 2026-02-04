@@ -1,0 +1,545 @@
+2026-01-31 20:04:00,526 INFO o.s.b.StartupInfoLogger [main] Starting AuthenticationHabitCoreApplication using Java 17.0.17 on o27011741.local with PID 71039 (/Users/cesluknikitaivanovic/IdeaProjects/authentication-habit-core/target/classes started by cesluknikitaivanovic in /Users/cesluknikitaivanovic/IdeaProjects/authentication-habit-core)
+2026-01-31 20:04:00,528 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.5.6, Spring v5.3.12
+2026-01-31 20:04:00,529 INFO o.s.b.SpringApplication [main] The following profiles are active: local
+2026-01-31 20:04:00,815 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-31 20:04:00,842 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 22 ms. Found 1 JPA repository interfaces.
+2026-01-31 20:04:01,095 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8098 (http)
+2026-01-31 20:04:01,101 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2026-01-31 20:04:01,101 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2026-01-31 20:04:01,151 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2026-01-31 20:04:01,152 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 602 ms
+2026-01-31 20:04:01,348 INFO l.l.c.JavaLogger [main] Set default schema name to public
+2026-01-31 20:04:01,502 INFO l.l.c.JavaLogger [main] Logging exception.
+2026-01-31 20:04:01,502 INFO l.l.c.JavaLogger [main] ERROR: Exception Details
+2026-01-31 20:04:01,502 INFO l.l.c.JavaLogger [main] ERROR: Exception Primary Class:  ChangeLogParseException
+2026-01-31 20:04:01,502 INFO l.l.c.JavaLogger [main] ERROR: Exception Primary Reason:  The file db/changelog/create_users_table/CREATE DATABASE user_info; was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+2026-01-31 20:04:01,502 INFO l.l.c.JavaLogger [main] ERROR: Exception Primary Source:  4.27.0
+2026-01-31 20:04:01,502 INFO l.l.c.JavaLogger [main] Command execution complete
+2026-01-31 20:04:01,505 WARN o.s.c.s.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: The file db/changelog/create_users_table/CREATE DATABASE user_info; was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+2026-01-31 20:04:01,506 INFO o.a.j.l.DirectJDKLog [main] Stopping service [Tomcat]
+2026-01-31 20:04:01,511 INFO o.s.b.a.l.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-01-31 20:04:01,520 ERROR o.s.b.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: The file db/changelog/create_users_table/CREATE DATABASE user_info; was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.habit.core.authentication_habit_core.AuthenticationHabitCoreApplication.main(AuthenticationHabitCoreApplication.java:10)
+Caused by: liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: The file db/changelog/create_users_table/CREATE DATABASE user_info; was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:259)
+	at org.springframework.boot.autoconfigure.liquibase.DataSourceClosingSpringLiquibase.afterPropertiesSet(DataSourceClosingSpringLiquibase.java:46)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 18 common frames omitted
+Caused by: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: The file db/changelog/create_users_table/CREATE DATABASE user_info; was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+	at liquibase.command.CommandScope.execute(CommandScope.java:257)
+	at liquibase.Liquibase.lambda$update$0(Liquibase.java:245)
+	at liquibase.Scope.lambda$child$0(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:199)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:168)
+	at liquibase.Liquibase.runInScope(Liquibase.java:1436)
+	at liquibase.Liquibase.update(Liquibase.java:234)
+	at liquibase.Liquibase.update(Liquibase.java:212)
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:297)
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:249)
+	at liquibase.Scope.lambda$child$0(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:199)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:168)
+	at liquibase.Scope.child(Scope.java:256)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:242)
+	... 21 common frames omitted
+Caused by: liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: The file db/changelog/create_users_table/CREATE DATABASE user_info; was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:25)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.lambda$getDatabaseChangeLog$0(DatabaseChangelogCommandStep.java:129)
+	at liquibase.Scope.child(Scope.java:199)
+	at liquibase.Scope.child(Scope.java:175)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.getDatabaseChangeLog(DatabaseChangelogCommandStep.java:128)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.run(DatabaseChangelogCommandStep.java:87)
+	at liquibase.command.CommandScope.execute(CommandScope.java:219)
+	... 37 common frames omitted
+Caused by: liquibase.exception.SetupException: The file db/changelog/create_users_table/CREATE DATABASE user_info; was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+	at liquibase.changelog.DatabaseChangeLog.handleChildNode(DatabaseChangeLog.java:465)
+	at liquibase.changelog.DatabaseChangeLog.load(DatabaseChangeLog.java:390)
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:23)
+	... 43 common frames omitted
+Caused by: liquibase.exception.LiquibaseException: The file db/changelog/create_users_table/CREATE DATABASE user_info; was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+	at liquibase.changelog.DatabaseChangeLog.include(DatabaseChangeLog.java:987)
+	at liquibase.changelog.DatabaseChangeLog.handleChildNode(DatabaseChangeLog.java:455)
+	... 45 common frames omitted
+Caused by: liquibase.exception.ChangeLogParseException: The file db/changelog/create_users_table/CREATE DATABASE user_info; was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+	at liquibase.changelog.DatabaseChangeLog.include(DatabaseChangeLog.java:949)
+	... 46 common frames omitted
+2026-01-31 20:04:51,200 INFO o.s.b.StartupInfoLogger [main] Starting AuthenticationHabitCoreApplication using Java 17.0.17 on o27011741.local with PID 71061 (/Users/cesluknikitaivanovic/IdeaProjects/authentication-habit-core/target/classes started by cesluknikitaivanovic in /Users/cesluknikitaivanovic/IdeaProjects/authentication-habit-core)
+2026-01-31 20:04:51,201 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.5.6, Spring v5.3.12
+2026-01-31 20:04:51,201 INFO o.s.b.SpringApplication [main] The following profiles are active: local
+2026-01-31 20:04:51,468 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-31 20:04:51,492 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 21 ms. Found 1 JPA repository interfaces.
+2026-01-31 20:04:51,725 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8098 (http)
+2026-01-31 20:04:51,730 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2026-01-31 20:04:51,731 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2026-01-31 20:04:51,779 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2026-01-31 20:04:51,780 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 556 ms
+2026-01-31 20:04:51,952 INFO l.l.c.JavaLogger [main] Set default schema name to public
+2026-01-31 20:04:52,088 INFO l.l.c.JavaLogger [main] Logging exception.
+2026-01-31 20:04:52,088 INFO l.l.c.JavaLogger [main] ERROR: Exception Details
+2026-01-31 20:04:52,089 INFO l.l.c.JavaLogger [main] ERROR: Exception Primary Class:  ChangeLogParseException
+2026-01-31 20:04:52,089 INFO l.l.c.JavaLogger [main] ERROR: Exception Primary Reason:  The file db/changelog/create_users_table/create_users_table.sql; was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+2026-01-31 20:04:52,089 INFO l.l.c.JavaLogger [main] ERROR: Exception Primary Source:  4.27.0
+2026-01-31 20:04:52,089 INFO l.l.c.JavaLogger [main] Command execution complete
+2026-01-31 20:04:52,091 WARN o.s.c.s.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: The file db/changelog/create_users_table/create_users_table.sql; was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+2026-01-31 20:04:52,093 INFO o.a.j.l.DirectJDKLog [main] Stopping service [Tomcat]
+2026-01-31 20:04:52,098 INFO o.s.b.a.l.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-01-31 20:04:52,105 ERROR o.s.b.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: The file db/changelog/create_users_table/create_users_table.sql; was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.habit.core.authentication_habit_core.AuthenticationHabitCoreApplication.main(AuthenticationHabitCoreApplication.java:10)
+Caused by: liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: The file db/changelog/create_users_table/create_users_table.sql; was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:259)
+	at org.springframework.boot.autoconfigure.liquibase.DataSourceClosingSpringLiquibase.afterPropertiesSet(DataSourceClosingSpringLiquibase.java:46)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 18 common frames omitted
+Caused by: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: The file db/changelog/create_users_table/create_users_table.sql; was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+	at liquibase.command.CommandScope.execute(CommandScope.java:257)
+	at liquibase.Liquibase.lambda$update$0(Liquibase.java:245)
+	at liquibase.Scope.lambda$child$0(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:199)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:168)
+	at liquibase.Liquibase.runInScope(Liquibase.java:1436)
+	at liquibase.Liquibase.update(Liquibase.java:234)
+	at liquibase.Liquibase.update(Liquibase.java:212)
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:297)
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:249)
+	at liquibase.Scope.lambda$child$0(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:199)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:168)
+	at liquibase.Scope.child(Scope.java:256)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:242)
+	... 21 common frames omitted
+Caused by: liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: The file db/changelog/create_users_table/create_users_table.sql; was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:25)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.lambda$getDatabaseChangeLog$0(DatabaseChangelogCommandStep.java:129)
+	at liquibase.Scope.child(Scope.java:199)
+	at liquibase.Scope.child(Scope.java:175)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.getDatabaseChangeLog(DatabaseChangelogCommandStep.java:128)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.run(DatabaseChangelogCommandStep.java:87)
+	at liquibase.command.CommandScope.execute(CommandScope.java:219)
+	... 37 common frames omitted
+Caused by: liquibase.exception.SetupException: The file db/changelog/create_users_table/create_users_table.sql; was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+	at liquibase.changelog.DatabaseChangeLog.handleChildNode(DatabaseChangeLog.java:465)
+	at liquibase.changelog.DatabaseChangeLog.load(DatabaseChangeLog.java:390)
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:23)
+	... 43 common frames omitted
+Caused by: liquibase.exception.LiquibaseException: The file db/changelog/create_users_table/create_users_table.sql; was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+	at liquibase.changelog.DatabaseChangeLog.include(DatabaseChangeLog.java:987)
+	at liquibase.changelog.DatabaseChangeLog.handleChildNode(DatabaseChangeLog.java:455)
+	... 45 common frames omitted
+Caused by: liquibase.exception.ChangeLogParseException: The file db/changelog/create_users_table/create_users_table.sql; was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+	at liquibase.changelog.DatabaseChangeLog.include(DatabaseChangeLog.java:949)
+	... 46 common frames omitted
+2026-01-31 20:06:17,500 INFO o.s.b.StartupInfoLogger [main] Starting AuthenticationHabitCoreApplication using Java 17.0.17 on o27011741.local with PID 71159 (/Users/cesluknikitaivanovic/IdeaProjects/authentication-habit-core/target/classes started by cesluknikitaivanovic in /Users/cesluknikitaivanovic/IdeaProjects/authentication-habit-core)
+2026-01-31 20:06:17,501 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.5.6, Spring v5.3.12
+2026-01-31 20:06:17,501 INFO o.s.b.SpringApplication [main] The following profiles are active: local
+2026-01-31 20:06:17,774 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-31 20:06:17,801 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 23 ms. Found 1 JPA repository interfaces.
+2026-01-31 20:06:18,053 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8098 (http)
+2026-01-31 20:06:18,058 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2026-01-31 20:06:18,059 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2026-01-31 20:06:18,095 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2026-01-31 20:06:18,095 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 573 ms
+2026-01-31 20:06:18,272 INFO l.l.c.JavaLogger [main] Set default schema name to public
+2026-01-31 20:06:18,417 INFO l.l.c.JavaLogger [main] Logging exception.
+2026-01-31 20:06:18,418 INFO l.l.c.JavaLogger [main] ERROR: Exception Details
+2026-01-31 20:06:18,418 INFO l.l.c.JavaLogger [main] ERROR: Exception Primary Class:  ChangeLogParseException
+2026-01-31 20:06:18,418 INFO l.l.c.JavaLogger [main] ERROR: Exception Primary Reason:  The file db/changelog/first_init/create_users_table.sql; was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+2026-01-31 20:06:18,418 INFO l.l.c.JavaLogger [main] ERROR: Exception Primary Source:  4.27.0
+2026-01-31 20:06:18,418 INFO l.l.c.JavaLogger [main] Command execution complete
+2026-01-31 20:06:18,421 WARN o.s.c.s.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: The file db/changelog/first_init/create_users_table.sql; was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+2026-01-31 20:06:18,426 INFO o.a.j.l.DirectJDKLog [main] Stopping service [Tomcat]
+2026-01-31 20:06:18,430 INFO o.s.b.a.l.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-01-31 20:06:18,437 ERROR o.s.b.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: The file db/changelog/first_init/create_users_table.sql; was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.habit.core.authentication_habit_core.AuthenticationHabitCoreApplication.main(AuthenticationHabitCoreApplication.java:10)
+Caused by: liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: The file db/changelog/first_init/create_users_table.sql; was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:259)
+	at org.springframework.boot.autoconfigure.liquibase.DataSourceClosingSpringLiquibase.afterPropertiesSet(DataSourceClosingSpringLiquibase.java:46)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 18 common frames omitted
+Caused by: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: The file db/changelog/first_init/create_users_table.sql; was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+	at liquibase.command.CommandScope.execute(CommandScope.java:257)
+	at liquibase.Liquibase.lambda$update$0(Liquibase.java:245)
+	at liquibase.Scope.lambda$child$0(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:199)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:168)
+	at liquibase.Liquibase.runInScope(Liquibase.java:1436)
+	at liquibase.Liquibase.update(Liquibase.java:234)
+	at liquibase.Liquibase.update(Liquibase.java:212)
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:297)
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:249)
+	at liquibase.Scope.lambda$child$0(Scope.java:190)
+	at liquibase.Scope.child(Scope.java:199)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:168)
+	at liquibase.Scope.child(Scope.java:256)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:242)
+	... 21 common frames omitted
+Caused by: liquibase.exception.ChangeLogParseException: liquibase.exception.SetupException: The file db/changelog/first_init/create_users_table.sql; was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:25)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.lambda$getDatabaseChangeLog$0(DatabaseChangelogCommandStep.java:129)
+	at liquibase.Scope.child(Scope.java:199)
+	at liquibase.Scope.child(Scope.java:175)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.getDatabaseChangeLog(DatabaseChangelogCommandStep.java:128)
+	at liquibase.command.core.helpers.DatabaseChangelogCommandStep.run(DatabaseChangelogCommandStep.java:87)
+	at liquibase.command.CommandScope.execute(CommandScope.java:219)
+	... 37 common frames omitted
+Caused by: liquibase.exception.SetupException: The file db/changelog/first_init/create_users_table.sql; was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+	at liquibase.changelog.DatabaseChangeLog.handleChildNode(DatabaseChangeLog.java:465)
+	at liquibase.changelog.DatabaseChangeLog.load(DatabaseChangeLog.java:390)
+	at liquibase.parser.core.xml.AbstractChangeLogParser.parse(AbstractChangeLogParser.java:23)
+	... 43 common frames omitted
+Caused by: liquibase.exception.LiquibaseException: The file db/changelog/first_init/create_users_table.sql; was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+	at liquibase.changelog.DatabaseChangeLog.include(DatabaseChangeLog.java:987)
+	at liquibase.changelog.DatabaseChangeLog.handleChildNode(DatabaseChangeLog.java:455)
+	... 45 common frames omitted
+Caused by: liquibase.exception.ChangeLogParseException: The file db/changelog/first_init/create_users_table.sql; was not found in the configured search path:
+    - Spring classpath
+More locations can be added with the 'searchPath' parameter.
+	at liquibase.changelog.DatabaseChangeLog.include(DatabaseChangeLog.java:949)
+	... 46 common frames omitted
+2026-01-31 20:06:32,651 INFO o.s.b.StartupInfoLogger [main] Starting AuthenticationHabitCoreApplication using Java 17.0.17 on o27011741.local with PID 71165 (/Users/cesluknikitaivanovic/IdeaProjects/authentication-habit-core/target/classes started by cesluknikitaivanovic in /Users/cesluknikitaivanovic/IdeaProjects/authentication-habit-core)
+2026-01-31 20:06:32,653 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.5.6, Spring v5.3.12
+2026-01-31 20:06:32,653 INFO o.s.b.SpringApplication [main] The following profiles are active: local
+2026-01-31 20:06:32,903 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-31 20:06:32,930 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 24 ms. Found 1 JPA repository interfaces.
+2026-01-31 20:06:33,170 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8098 (http)
+2026-01-31 20:06:33,175 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2026-01-31 20:06:33,176 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2026-01-31 20:06:33,230 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2026-01-31 20:06:33,230 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 556 ms
+2026-01-31 20:06:33,405 INFO l.l.c.JavaLogger [main] Set default schema name to public
+2026-01-31 20:06:33,631 INFO l.l.c.JavaLogger [main] Reading from public.databasechangelog
+2026-01-31 20:06:33,666 INFO l.l.c.JavaLogger [main] Successfully acquired change log lock
+2026-01-31 20:06:33,667 INFO l.l.c.JavaLogger [main] Using deploymentId: 9879193667
+2026-01-31 20:06:33,669 INFO l.l.c.JavaLogger [main] Reading from public.databasechangelog
+2026-01-31 20:06:33,674 INFO l.l.c.JavaLogger [main] Running Changeset: db/changelog/first_init/create_users_table.sql::raw::includeAll
+2026-01-31 20:06:33,729 INFO l.l.c.JavaLogger [main] Custom SQL executed
+2026-01-31 20:06:33,731 INFO l.l.c.JavaLogger [main] ChangeSet db/changelog/first_init/create_users_table.sql::raw::includeAll ran successfully in 56ms
+2026-01-31 20:06:33,738 INFO l.l.c.JavaLogger [main] UPDATE SUMMARY
+2026-01-31 20:06:33,738 INFO l.l.c.JavaLogger [main] Run:                          1
+2026-01-31 20:06:33,739 INFO l.l.c.JavaLogger [main] Previously run:               0
+2026-01-31 20:06:33,739 INFO l.l.c.JavaLogger [main] Filtered out:                 0
+2026-01-31 20:06:33,739 INFO l.l.c.JavaLogger [main] -------------------------------
+2026-01-31 20:06:33,739 INFO l.l.c.JavaLogger [main] Total change sets:            1
+2026-01-31 20:06:33,739 INFO l.l.c.JavaLogger [main] Update summary generated
+2026-01-31 20:06:33,740 INFO l.l.c.JavaLogger [main] Update command completed successfully.
+2026-01-31 20:06:33,740 INFO l.l.c.JavaLogger [main] Liquibase: Update has been successful. Rows affected: 1
+2026-01-31 20:06:33,742 INFO l.l.c.JavaLogger [main] Successfully released change log lock
+2026-01-31 20:06:33,742 INFO l.l.c.JavaLogger [main] Command execution complete
+2026-01-31 20:06:33,794 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-31 20:06:33,817 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 5.4.32.Final
+2026-01-31 20:06:33,881 INFO o.h.a.c.r.j.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-01-31 20:06:33,922 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2026-01-31 20:06:33,955 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2026-01-31 20:06:33,962 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-01-31 20:06:34,122 ERROR o.s.o.j.AbstractEntityManagerFactoryBean [main] Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Repeated column in mapping for entity: com.habit.core.authentication_habit_core.entities.User column: email (should be mapped with insert="false" update="false")
+2026-01-31 20:06:34,123 WARN o.s.c.s.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Repeated column in mapping for entity: com.habit.core.authentication_habit_core.entities.User column: email (should be mapped with insert="false" update="false")
+2026-01-31 20:06:34,123 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2026-01-31 20:06:34,134 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2026-01-31 20:06:34,135 INFO o.a.j.l.DirectJDKLog [main] Stopping service [Tomcat]
+2026-01-31 20:06:34,140 INFO o.s.b.a.l.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-01-31 20:06:34,146 ERROR o.s.b.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Repeated column in mapping for entity: com.habit.core.authentication_habit_core.entities.User column: email (should be mapped with insert="false" update="false")
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.habit.core.authentication_habit_core.AuthenticationHabitCoreApplication.main(AuthenticationHabitCoreApplication.java:10)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Repeated column in mapping for entity: com.habit.core.authentication_habit_core.entities.User column: email (should be mapped with insert="false" update="false")
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 16 common frames omitted
+Caused by: org.hibernate.MappingException: Repeated column in mapping for entity: com.habit.core.authentication_habit_core.entities.User column: email (should be mapped with insert="false" update="false")
+	at org.hibernate.mapping.PersistentClass.checkColumnDuplication(PersistentClass.java:862)
+	at org.hibernate.mapping.PersistentClass.checkPropertyColumnDuplication(PersistentClass.java:880)
+	at org.hibernate.mapping.PersistentClass.checkColumnDuplication(PersistentClass.java:902)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:634)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:267)
+	at org.hibernate.boot.internal.MetadataImpl.validate(MetadataImpl.java:354)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:298)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 20 common frames omitted
+2026-01-31 20:08:48,293 INFO o.s.b.StartupInfoLogger [main] Starting AuthenticationHabitCoreApplication using Java 17.0.17 on o27011741.local with PID 71196 (/Users/cesluknikitaivanovic/IdeaProjects/authentication-habit-core/target/classes started by cesluknikitaivanovic in /Users/cesluknikitaivanovic/IdeaProjects/authentication-habit-core)
+2026-01-31 20:08:48,294 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.5.6, Spring v5.3.12
+2026-01-31 20:08:48,294 INFO o.s.b.SpringApplication [main] The following profiles are active: local
+2026-01-31 20:08:48,567 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-31 20:08:48,597 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 27 ms. Found 1 JPA repository interfaces.
+2026-01-31 20:08:48,829 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8098 (http)
+2026-01-31 20:08:48,834 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2026-01-31 20:08:48,834 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2026-01-31 20:08:48,890 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2026-01-31 20:08:48,890 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 574 ms
+2026-01-31 20:08:49,061 INFO l.l.c.JavaLogger [main] Set default schema name to public
+2026-01-31 20:08:49,258 INFO l.l.c.JavaLogger [main] Reading from public.databasechangelog
+2026-01-31 20:08:49,278 INFO l.l.c.JavaLogger [main] Database is up to date, no changesets to execute
+2026-01-31 20:08:49,279 INFO l.l.c.JavaLogger [main] Reading from public.databasechangelog
+2026-01-31 20:08:49,287 INFO l.l.c.JavaLogger [main] UPDATE SUMMARY
+2026-01-31 20:08:49,287 INFO l.l.c.JavaLogger [main] Run:                          0
+2026-01-31 20:08:49,287 INFO l.l.c.JavaLogger [main] Previously run:               1
+2026-01-31 20:08:49,287 INFO l.l.c.JavaLogger [main] Filtered out:                 0
+2026-01-31 20:08:49,287 INFO l.l.c.JavaLogger [main] -------------------------------
+2026-01-31 20:08:49,287 INFO l.l.c.JavaLogger [main] Total change sets:            1
+2026-01-31 20:08:49,287 INFO l.l.c.JavaLogger [main] Update summary generated
+2026-01-31 20:08:49,298 INFO l.l.c.JavaLogger [main] Successfully released change log lock
+2026-01-31 20:08:49,299 INFO l.l.c.JavaLogger [main] Command execution complete
+2026-01-31 20:08:49,346 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-31 20:08:49,367 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 5.4.32.Final
+2026-01-31 20:08:49,418 INFO o.h.a.c.r.j.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-01-31 20:08:49,452 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2026-01-31 20:08:49,482 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2026-01-31 20:08:49,489 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-01-31 20:08:49,745 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-01-31 20:08:49,749 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-31 20:08:49,889 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-31 20:08:50,014 INFO o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [main] 
+
+Using generated security password: 63d6c4f7-c9fe-46ec-9119-f847818162dd
+
+2026-01-31 20:08:50,060 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@53b9952f, org.springframework.security.web.context.SecurityContextPersistenceFilter@3b28ab9b, org.springframework.security.web.header.HeaderWriterFilter@7e5e7753, org.springframework.security.web.csrf.CsrfFilter@7d0312a, org.springframework.security.web.authentication.logout.LogoutFilter@544733a4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@78e59b04, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@8aafd70, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7bdddfa4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@50d6af87, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@278cbf5a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3f030217, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1e12fdcf, org.springframework.security.web.session.SessionManagementFilter@395115ac, org.springframework.security.web.access.ExceptionTranslationFilter@2571bdf4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@74267ece]
+2026-01-31 20:08:50,088 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8098 (http) with context path '/api/authentication'
+2026-01-31 20:08:50,094 INFO o.s.b.StartupInfoLogger [main] Started AuthenticationHabitCoreApplication in 7.057 seconds (JVM running for 7.23)
+2026-01-31 20:10:17,245 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-31 20:10:17,247 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2026-01-31 20:10:17,248 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2026-01-31 20:10:24,591 INFO o.s.b.StartupInfoLogger [main] Starting AuthenticationHabitCoreApplication using Java 17.0.17 on o27011741.local with PID 71239 (/Users/cesluknikitaivanovic/IdeaProjects/authentication-habit-core/target/classes started by cesluknikitaivanovic in /Users/cesluknikitaivanovic/IdeaProjects/authentication-habit-core)
+2026-01-31 20:10:24,592 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.5.6, Spring v5.3.12
+2026-01-31 20:10:24,592 INFO o.s.b.SpringApplication [main] The following profiles are active: local
+2026-01-31 20:10:24,864 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-31 20:10:24,890 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 21 ms. Found 1 JPA repository interfaces.
+2026-01-31 20:10:25,130 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8098 (http)
+2026-01-31 20:10:25,135 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2026-01-31 20:10:25,135 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2026-01-31 20:10:25,177 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2026-01-31 20:10:25,178 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 564 ms
+2026-01-31 20:10:25,349 INFO l.l.c.JavaLogger [main] Set default schema name to public
+2026-01-31 20:10:25,537 INFO l.l.c.JavaLogger [main] Reading from public.databasechangelog
+2026-01-31 20:10:25,555 INFO l.l.c.JavaLogger [main] Database is up to date, no changesets to execute
+2026-01-31 20:10:25,558 INFO l.l.c.JavaLogger [main] Reading from public.databasechangelog
+2026-01-31 20:10:25,562 INFO l.l.c.JavaLogger [main] UPDATE SUMMARY
+2026-01-31 20:10:25,563 INFO l.l.c.JavaLogger [main] Run:                          0
+2026-01-31 20:10:25,563 INFO l.l.c.JavaLogger [main] Previously run:               1
+2026-01-31 20:10:25,563 INFO l.l.c.JavaLogger [main] Filtered out:                 0
+2026-01-31 20:10:25,563 INFO l.l.c.JavaLogger [main] -------------------------------
+2026-01-31 20:10:25,563 INFO l.l.c.JavaLogger [main] Total change sets:            1
+2026-01-31 20:10:25,564 INFO l.l.c.JavaLogger [main] Update summary generated
+2026-01-31 20:10:25,580 INFO l.l.c.JavaLogger [main] Successfully released change log lock
+2026-01-31 20:10:25,581 INFO l.l.c.JavaLogger [main] Command execution complete
+2026-01-31 20:10:25,623 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-31 20:10:25,642 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 5.4.32.Final
+2026-01-31 20:10:25,691 INFO o.h.a.c.r.j.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-01-31 20:10:25,724 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2026-01-31 20:10:25,744 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2026-01-31 20:10:25,751 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-01-31 20:10:26,012 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-01-31 20:10:26,016 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-31 20:10:26,183 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-31 20:10:26,317 INFO o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [main] 
+
+Using generated security password: d9a85233-83f1-4635-a229-8defa9d03154
+
+2026-01-31 20:10:26,360 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@38f3dbbf, org.springframework.security.web.context.SecurityContextPersistenceFilter@241abc2, org.springframework.security.web.header.HeaderWriterFilter@5cff6d1d, org.springframework.security.web.csrf.CsrfFilter@17e66aed, org.springframework.security.web.authentication.logout.LogoutFilter@5d8112e6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@74267ece, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3f030217, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@574e4184, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@556e4588, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@11678469, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@16c1345b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@70ab1ce0, org.springframework.security.web.session.SessionManagementFilter@4844e24b, org.springframework.security.web.access.ExceptionTranslationFilter@293ba26c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@43c20142]
+2026-01-31 20:10:26,386 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8098 (http) with context path '/api/authentication'
+2026-01-31 20:10:26,392 INFO o.s.b.StartupInfoLogger [main] Started AuthenticationHabitCoreApplication in 7.044 seconds (JVM running for 7.219)
+2026-01-31 20:11:25,652 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-31 20:11:25,654 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2026-01-31 20:11:25,655 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2026-01-31 20:11:31,904 INFO o.s.b.StartupInfoLogger [main] Starting AuthenticationHabitCoreApplication using Java 17.0.17 on o27011741.local with PID 71265 (/Users/cesluknikitaivanovic/IdeaProjects/authentication-habit-core/target/classes started by cesluknikitaivanovic in /Users/cesluknikitaivanovic/IdeaProjects/authentication-habit-core)
+2026-01-31 20:11:31,905 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.5.6, Spring v5.3.12
+2026-01-31 20:11:31,905 INFO o.s.b.SpringApplication [main] The following profiles are active: local
+2026-01-31 20:11:32,189 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-31 20:11:32,222 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 28 ms. Found 1 JPA repository interfaces.
+2026-01-31 20:11:32,493 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8098 (http)
+2026-01-31 20:11:32,499 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2026-01-31 20:11:32,499 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2026-01-31 20:11:32,555 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2026-01-31 20:11:32,555 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 629 ms
+2026-01-31 20:11:32,723 INFO l.l.c.JavaLogger [main] Set default schema name to public
+2026-01-31 20:11:32,914 INFO l.l.c.JavaLogger [main] Creating database history table with name: public.databasechangelog
+2026-01-31 20:11:32,977 INFO l.l.c.JavaLogger [main] Reading from public.databasechangelog
+2026-01-31 20:11:33,027 INFO l.l.c.JavaLogger [main] Successfully acquired change log lock
+2026-01-31 20:11:33,028 INFO l.l.c.JavaLogger [main] Using deploymentId: 9879493028
+2026-01-31 20:11:33,031 INFO l.l.c.JavaLogger [main] Reading from public.databasechangelog
+2026-01-31 20:11:33,045 INFO l.l.c.JavaLogger [main] Running Changeset: db/changelog/first_init/create_users_table.sql::raw::includeAll
+2026-01-31 20:11:33,065 INFO l.l.c.JavaLogger [main] Custom SQL executed
+2026-01-31 20:11:33,066 INFO l.l.c.JavaLogger [main] ChangeSet db/changelog/first_init/create_users_table.sql::raw::includeAll ran successfully in 20ms
+2026-01-31 20:11:33,073 INFO l.l.c.JavaLogger [main] UPDATE SUMMARY
+2026-01-31 20:11:33,073 INFO l.l.c.JavaLogger [main] Run:                          1
+2026-01-31 20:11:33,073 INFO l.l.c.JavaLogger [main] Previously run:               0
+2026-01-31 20:11:33,073 INFO l.l.c.JavaLogger [main] Filtered out:                 0
+2026-01-31 20:11:33,073 INFO l.l.c.JavaLogger [main] -------------------------------
+2026-01-31 20:11:33,073 INFO l.l.c.JavaLogger [main] Total change sets:            1
+2026-01-31 20:11:33,073 INFO l.l.c.JavaLogger [main] Update summary generated
+2026-01-31 20:11:33,074 INFO l.l.c.JavaLogger [main] Update command completed successfully.
+2026-01-31 20:11:33,074 INFO l.l.c.JavaLogger [main] Liquibase: Update has been successful. Rows affected: 1
+2026-01-31 20:11:33,076 INFO l.l.c.JavaLogger [main] Successfully released change log lock
+2026-01-31 20:11:33,077 INFO l.l.c.JavaLogger [main] Command execution complete
+2026-01-31 20:11:33,123 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-31 20:11:33,147 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 5.4.32.Final
+2026-01-31 20:11:33,211 INFO o.h.a.c.r.j.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-01-31 20:11:33,256 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2026-01-31 20:11:33,290 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2026-01-31 20:11:33,297 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2026-01-31 20:11:33,553 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-01-31 20:11:33,557 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-31 20:11:33,722 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-31 20:11:33,847 INFO o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [main] 
+
+Using generated security password: 80b26c4a-c84b-4345-a81d-307ddf676a0b
+
+2026-01-31 20:11:33,890 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3ef7fb04, org.springframework.security.web.context.SecurityContextPersistenceFilter@71e55e48, org.springframework.security.web.header.HeaderWriterFilter@112b3298, org.springframework.security.web.csrf.CsrfFilter@4c9bed65, org.springframework.security.web.authentication.logout.LogoutFilter@5af1b221, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@85eba52, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4964d801, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2446be5f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4779df3d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5f01361e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6e4bccc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2d4f1ddd, org.springframework.security.web.session.SessionManagementFilter@90c01ab, org.springframework.security.web.access.ExceptionTranslationFilter@543196f9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6a906078]
+2026-01-31 20:11:33,918 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8098 (http) with context path '/api/authentication'
+2026-01-31 20:11:33,923 INFO o.s.b.StartupInfoLogger [main] Started AuthenticationHabitCoreApplication in 7.266 seconds (JVM running for 7.437)
+2026-01-31 20:14:46,009 INFO o.a.j.l.DirectJDKLog [http-nio-8098-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-31 20:14:46,009 INFO o.s.w.s.FrameworkServlet [http-nio-8098-exec-2] Initializing Servlet 'dispatcherServlet'
+2026-01-31 20:14:46,010 INFO o.s.w.s.FrameworkServlet [http-nio-8098-exec-2] Completed initialization in 1 ms
+2026-01-31 21:37:44,217 WARN c.z.h.p.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m9s687ms).
+2026-01-31 21:56:40,211 WARN c.z.h.p.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m55s995ms).
+2026-01-31 22:13:24,923 WARN c.z.h.p.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m44s712ms).
+2026-01-31 22:47:54,217 WARN c.z.h.p.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=34m29s294ms).
+2026-01-31 22:49:14,028 WARN c.z.h.p.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m19s811ms).
+2026-01-31 23:06:11,301 WARN c.z.h.p.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m57s273ms).
+2026-01-31 23:21:38,460 WARN c.z.h.p.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s159ms).
+2026-01-31 23:37:58,297 WARN c.z.h.p.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m19s837ms).

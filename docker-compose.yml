@@ -1,0 +1,23 @@
+version: '0.1'
+
+services:
+  habit-auth-app:
+    image: habitauth:latest
+    env_file:
+      - .env
+    ports:
+      - "8098:8098"
+    depends_on:
+      - db
+    restart: unless-stopped
+
+  db:
+    image: postgres:15
+    env_file:
+      - .env
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  pgdata:  {}
