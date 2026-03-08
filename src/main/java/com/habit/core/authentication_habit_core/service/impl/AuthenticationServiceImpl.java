@@ -4,7 +4,6 @@ package com.habit.core.authentication_habit_core.service.impl;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.habit.core.authentication_habit_core.exception.RefreshTokenException;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.AuthenticationException;
@@ -15,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.habit.core.authentication_habit_core.entities.RefreshToken;
 import com.habit.core.authentication_habit_core.entities.User;
+import com.habit.core.authentication_habit_core.exception.RefreshTokenException;
 import com.habit.core.authentication_habit_core.exception.UserException;
 import com.habit.core.authentication_habit_core.repository.UserRepository;
 import com.habit.core.authentication_habit_core.security.jwt.JwtTokenProvider;
@@ -45,7 +45,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 		this.authenticationManager = authenticationManager;
 	}
 
-    //many logic create many refresh tokens
+	// many logic create many refresh tokens
 	@Override
 	public AuthenticationResponseTO login(AuthenticationRequestTO authenticationRequestTO) throws UserException {
 
@@ -88,7 +88,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 		return new AuthenticationResponseTO(updatedAccessToken, updatedRefreshToken);
 	}
 
-    //delete after logout refresh token
+	// delete after logout refresh token
 	@Override
 	public void logout(HttpServletRequest request, HttpServletResponse response) {
 		SecurityContextLogoutHandler securityContextLogoutHandler = new SecurityContextLogoutHandler();

@@ -1,6 +1,7 @@
 package com.habit.core.authentication_habit_core.exception.common;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+
 import lombok.Data;
 import lombok.experimental.Accessors;
 

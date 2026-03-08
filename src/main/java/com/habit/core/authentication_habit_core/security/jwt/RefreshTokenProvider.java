@@ -7,15 +7,13 @@ import java.util.UUID;
 
 import javax.annotation.PostConstruct;
 
-import com.habit.core.authentication_habit_core.exception.RefreshTokenException;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 
 import com.habit.core.authentication_habit_core.entities.RefreshToken;
 import com.habit.core.authentication_habit_core.entities.User;
-import com.habit.core.authentication_habit_core.exception.JwtAuthenticationException;
+import com.habit.core.authentication_habit_core.exception.RefreshTokenException;
 import com.habit.core.authentication_habit_core.repository.RefreshTokenRepository;
 
 import io.jsonwebtoken.*;
