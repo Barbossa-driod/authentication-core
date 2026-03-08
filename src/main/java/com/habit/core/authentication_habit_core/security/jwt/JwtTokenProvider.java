@@ -26,13 +26,13 @@ public class JwtTokenProvider {
 
 	private final UserDetailsService userDetailsService;
 
-	@Value("${jwt.secret}")
+	@Value("${jwt.token.access.secret}")
 	private String secretKey;
 
-	@Value("${jwt.header}")
+	@Value("${jwt.token.access.header}")
 	private String authorizationHeader;
 
-	@Value("${jwt.expiration}")
+	@Value("${jwt.token.access.expiration}")
 	private long validityInMilliseconds;
 
 	public JwtTokenProvider(@Qualifier("userDetailsServiceImpl") UserDetailsService userDetailsService) {

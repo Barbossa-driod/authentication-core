@@ -29,9 +29,14 @@ spring:
     password: ${SPRING_DATASOURCE_PASSWORD}
 
 jwt:
-  secret: ${JWT_SECRET}
-  header: Authorization
-  expiration: 600
+  token:
+    access:
+      secret: ${ACCESS_SECRET}
+      header: Authorization
+      expiration: 6000
+    refresh:
+      secret: ${REFRESH_SECRET}
+      expiration: 10
 
 logging:
   level:

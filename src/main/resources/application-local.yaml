@@ -29,9 +29,14 @@ spring:
 #    password: root
 
 jwt:
-  secret: ${SECRET}
-  header: Authorization
-  expiration: 600
+  token:
+    access:
+      secret: ${ACCESS_SECRET}
+      header: Authorization
+      expiration: 6000
+    refresh:
+      secret: ${REFRESH_SECRET}
+      expiration: 10
 
 logging:
   level:
@@ -40,4 +45,5 @@ logging:
 filter:
   exclusion:
     urls: >
-      /test,
+      /login,
+      /refresh

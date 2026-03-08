@@ -7,5 +7,6 @@ public final class IHeaderConstants {
 	}
 
 	public static String BEARER = "Bearer ";
+	public static String X_REFRESH_TOKEN = "X-Refresh-Token";
 
 }

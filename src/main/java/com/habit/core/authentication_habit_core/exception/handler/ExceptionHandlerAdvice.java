@@ -1,5 +1,6 @@
 package com.habit.core.authentication_habit_core.exception.handler;
 
+import com.habit.core.authentication_habit_core.exception.RefreshTokenException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -18,8 +19,14 @@ public class ExceptionHandlerAdvice {
 
 	@ExceptionHandler(UserException.class)
 	@ResponseStatus(HttpStatus.SERVICE_UNAVAILABLE)
-	public ErrorCommon handleARateBusinessException(UserException exception) {
+	public ErrorCommon handleUserException(UserException exception) {
 		return new ErrorCommon().setMessage(exception.getMessage());
 	}
+
+    @ExceptionHandler(RefreshTokenException.class)
+    @ResponseStatus(HttpStatus.UNAUTHORIZED)
+    public ErrorCommon handleRefreshTokenException(RefreshTokenException exception) {
+        return new ErrorCommon().setMessage(exception.getMessage());
+    }
 
 }

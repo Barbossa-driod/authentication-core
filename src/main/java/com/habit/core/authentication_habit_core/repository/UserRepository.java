@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import com.habit.core.authentication_habit_core.entities.User;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface UserRepository extends JpaRepository<User, String> {
 
 	Optional<User> findByUserName(String userName);
 

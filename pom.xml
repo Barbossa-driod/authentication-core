@@ -31,6 +31,7 @@
         <org.projectlombok.version>1.18.20</org.projectlombok.version>
         <jjwt.version>0.9.1</jjwt.version>
         <spotless.version>2.33.0</spotless.version>
+        <commons-codec.version>1.16.0</commons-codec.version>
 	</properties>
 	<dependencies>
 
@@ -78,11 +79,16 @@
             <version>4.27.0</version>
         </dependency>
 
-
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>
             <version>${jjwt.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>${commons-codec.version}</version>
         </dependency>
 
 
