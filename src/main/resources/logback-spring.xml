@@ -16,7 +16,7 @@
 
     <appender name="RollingFile"
               class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${LOGS}/authentication-habit-logger.log</file>
+        <file>${LOGS}/authentication-logger.log</file>
         <encoder
                 class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <Pattern>%d %p %C{1} [%t] %m%n</Pattern>
@@ -24,7 +24,7 @@
 
 <!--        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
 <!--            &lt;!&ndash; rollover daily and when the file reaches 10 MegaBytes &ndash;&gt;-->
-<!--            <fileNamePattern>${LOGS}/archived/authentication-habit-logger-%d{yyyy-MM-dd}.%i.log-->
+<!--            <fileNamePattern>${LOGS}/archived/authentication-logger-%d{yyyy-MM-dd}.%i.log-->
 <!--            </fileNamePattern>-->
 <!--            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">-->
 <!--                <maxFileSize>10MB</maxFileSize>-->
@@ -38,7 +38,7 @@
         <appender-ref ref="Console"/>
     </root>
 
-    <logger name="com.habit.core.authentication_habit_core" level="trace" additivity="false">
+    <logger name="com.auth.core" level="trace" additivity="false">
         <appender-ref ref="RollingFile"/>
         <appender-ref ref="Console"/>
     </logger>

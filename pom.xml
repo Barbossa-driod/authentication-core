@@ -8,10 +8,10 @@
 		<version>2.5.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.habit.core</groupId>
-	<artifactId>authentication-habit-core</artifactId>
+	<groupId>com.auth.core</groupId>
+	<artifactId>authentication-core</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>authentication-habit-core</name>
+	<name>authentication-core</name>
 	<description>authentication microservice core</description>
 	<url/>
 	<licenses>

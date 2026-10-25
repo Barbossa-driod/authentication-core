@@ -5,7 +5,7 @@ server:
 
 spring:
   application:
-    name: authentication-habit-core
+    name: authentication-core
   jpa:
     show-sql: true
     hibernate:

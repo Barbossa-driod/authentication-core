@@ -1,8 +1,8 @@
 version: '0.1'
 
 services:
-  habit-auth-app:
-    image: habitauth:latest
+  auth-app:
+    image: auth:latest
     env_file:
       - .env
     ports:
