@@ -46,4 +46,4 @@ filter:
   exclusion:
     urls: >
       /login,
-      /refresh≠
+      /refresh
